@@ -23,7 +23,8 @@ def get_quiz(request):
             data.append({
                 'category':question_obj.category.category_name,
                 'question':question_obj.question,
-                'marks':question_obj.marks
+                'marks':question_obj.marks,
+                'answers':question_obj.get_answer()
             })
 
         payload = {'status':True,'data':data}
